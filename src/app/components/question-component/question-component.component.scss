@@ -1,0 +1,28 @@
+
+.category-questions {
+  .list {
+    margin-top: 30px;
+  }
+  .list-item {
+    margin-bottom: 10px;
+    &:not(:first-child) {
+      border-top: 1px solid #e1e1e1;
+    }
+
+    .icons-line {
+      margin-top: 10px;
+      .list-single-icon {
+        color: #555;
+        font-size: 20px;
+      }
+      .list-single-icon-number {
+        color: #555;
+        vertical-align: top;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="col-lg-12 category-questions">
+  <div class="card col-md-offset-2 col-md-8 ">
+    <h3 class="list-title">Learn about: {{category.title}}</h3>
+    <button mat-raised-button color="primary" (click)="openModal()">New Question</button>
+    <mat-list class="list" *ngFor="let question of questions$ | async">
+      <mat-list-item class="list-item">
+        <h3 matLine>
+          <a [routerLink]="['/answer/',question.id]">{{question.title}}</a>
+        </h3>
+        <p matLine class="icons-line">
+          <i class="list-single-icon fa fa-thumbs-o-up" aria-hidden="true" (click)="updateLike(question.id,1)"></i>
+          <span class="list-single-icon-number">{{question.like}}</span>
+          <i class="list-single-icon fa fa-thumbs-o-down" (click)="updateLike(question.id,0)"></i>
+          <span class="list-single-icon-number">{{question.dislike}}</span>
+          <i class="list-single-icon fa fa fa-trash-o" (click)="delete(question.id)"></i>
+          <span class="list-single-icon-number">{{question.countAnswer}}</span>
+          <span class="list-single-icon-number"> Answers</span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
