@@ -5,7 +5,7 @@
       <mat-list-item class="list-item" *ngFor="let category of categories$ | async">
         <img matListAvatar class="avatar" [src]="category.imagesUrl" alt="">
         <h3 matLine class="list-line">
-          <a [routerLink]="['/questions/about',category.id]">{{category.title}}</a>
+          <a [routerLink]="['questions/',category.id]">{{category.title}}</a>
         </h3>
         <h3 matLine class="list-line">{{category.description}}</h3>
         <div matLine class="list-line">
@@ -16,4 +16,5 @@
       </mat-list-item>
     </mat-list>
   </div>
+
 </div>
